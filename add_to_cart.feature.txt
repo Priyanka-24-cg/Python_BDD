@@ -1,0 +1,12 @@
+Feature: Add items to cart functionality
+
+  Scenario: Verify items are listed in cart in the order as added to cart with price
+    Given user is on the shopping page
+    When user adds 4 items with free shipping to cart
+    And user adds 1 item without free shipping to cart
+    Then user should see the items in the cart with correct prices and order
+
+  Scenario: Verify user is able to add same items multiple times
+    Given user is on the shopping page
+    When user adds the same item twice to the cart
+    Then the cart should display the correct quantity and price

@@ -1,0 +1,12 @@
+Feature: Filter validation functionality
+
+  Scenario: Verify user is able to filter items using different size filters
+    Given user is on the shopping page
+    When user selects size XS filter
+    Then the displayed items should be filtered to XS size
+
+  Scenario: Verify user is able to apply multiple filters (S, M) at once
+    Given user is on the shopping page
+    When user selects size S filter
+    And user selects size M filter
+    Then the displayed items should be filtered to both S and M size
